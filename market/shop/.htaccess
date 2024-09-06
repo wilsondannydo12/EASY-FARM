@@ -1,0 +1,10 @@
+RewriteEngine on
+
+RewriteCond %(REQUEST_FILENAME) !-f
+RewriteCond %(REQUEST_FILENAME) !-d
+
+RewriteRule ^products/([^/]+)$ products.php?shop_name=$1
+
+RewriteRule product-view/([^/]+) product-view.php?pro_id=$1&pro_name=$2 [L]
+
+
